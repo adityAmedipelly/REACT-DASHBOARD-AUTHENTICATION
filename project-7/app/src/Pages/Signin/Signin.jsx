@@ -3,7 +3,6 @@ import { object, string, ref } from 'yup';
 
 let Signinvalidation = object({
  
-  
   email: string().email("Email is invalid").required("Email is required"),
   password: string().min(6, "Password must be at least 6 characters").required("Password is required"),
 
@@ -14,11 +13,8 @@ function Signin() {
     <div className="h-screen w-screen flex justify-center items-center bg-slate-200">
       <Formik
         initialValues={{
-       
-   
           email: "",
           password: "",
-         
           agreeTerms: false,
         }}
         validationSchema={Signinvalidation}
@@ -34,8 +30,6 @@ function Signin() {
             <h4 className="text-slate-600 mt-4 text-center">
             Enter your credentials to access the account.
             </h4>
-
-            
 
             <div className="mt-3">
               <label htmlFor="email" className="text-xl font-medium text-slate-600">
@@ -68,9 +62,7 @@ function Signin() {
                 <div className="text-red-500 text-sm">{errors.password}</div>
               )}
             </div>
-
-            
-
+           
             <div className="inline-flex items-center mt-5">
               <Field
                 type="checkbox"
