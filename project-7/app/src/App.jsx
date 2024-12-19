@@ -1,38 +1,34 @@
-import Signin from "./Pages/Signin/Signin"
-import Signup from "./Pages/Signup/Signup"
-import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
+import Signin from "./Pages/Signin/Signin";
+import Signup from "./Pages/Signup/Signup";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-function Routers(){
-  return(
+function Routers() {
+  return (
     <div>
-    <BrowserRouter>
-  <nav>
-  <Link to='/Signin'>  </Link>
-    <Link to='/Signup/'>  </Link>
-  </nav>
-
-
-   <Routes>
-      <Route path='/Signin' element = {<Signin/>}/>
-      <Route path='/Signup' element = {<Signup/>}/>
-    </Routes>
-  
-    </BrowserRouter>
-
     
-  </div>
-  )
+      <BrowserRouter>
+        <nav>
   
+          <Link to="/Signup"></Link>
+          <Link to="/"></Link> 
+        </nav>
 
+        <Routes>
+          <Route path="//Signup" element={<Signup />} />
+          <Route path="/" element={<Signin />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-function App(){
-
-  return(
-     <>
-      <Routers/>
-     </>
-  )
+function App() {
+  return (
+    <>
+      <Routers />
+    
+    </>
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Link } from "react-router-dom";
 import { object, string, ref } from 'yup';
 
 let signupvalidation = object({
@@ -135,12 +136,15 @@ function Signup() {
             >
               Create Account
             </button>
-
             <div className="flex items-center justify-center gap-4 mt-4">
-              <p>Already have an account?</p>
-              <button className="text-blue-400">Log In</button>
-            </div>
+          <p>Already have an account?</p>
+          <Link to = "/">
+          <span className="text-blue-400">Log In</span>
+          </Link>
+        </div>
+          
           </Form>
+
         )}
       </Formik>
     </div>
