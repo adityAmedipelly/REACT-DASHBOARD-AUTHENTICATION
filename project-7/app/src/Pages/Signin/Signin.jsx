@@ -16,7 +16,6 @@ function Signin() {
         initialValues={{
           email: "",
           password: "",
-
           agreeTerms: false,
         }}
         validationSchema={Signinvalidation}
