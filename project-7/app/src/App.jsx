@@ -5,10 +5,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function Routers() {
   return (
     <div>
-    
       <BrowserRouter>
         <nav>
-  
           <Link to="/Signup"></Link>
           <Link to="/"></Link> 
         </nav>
@@ -26,7 +24,6 @@ function App() {
   return (
     <>
       <Routers />
-    
     </>
   );
 }
